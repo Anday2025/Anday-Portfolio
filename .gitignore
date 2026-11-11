@@ -1,0 +1,54 @@
+# Operating system metadata
+.DS_Store
+._*
+Thumbs.db
+Desktop.ini
+
+# Local IDE/editor files
+.idea/
+.vscode/
+*.iml
+*.swp
+*.swo
+*~
+
+# Local environment and private configuration
+.env
+.env.*
+*.local
+*.local.*
+local.settings.json
+.azure/
+.aws/
+.ssh/
+.swa/
+.codex/
+.agents/
+
+# Credentials, certificates and private keys
+*.pem
+*.key
+*.pfx
+*.p12
+*.jks
+*.keystore
+credentials*.json
+service-account*.json
+*service-account*.json
+
+# Dependencies, caches and temporary/generated output
+node_modules/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.cache/
+coverage/
+dist/
+build/
+tmp/
+temp/
+backups/
+*.log
+*.tmp
+*.bak

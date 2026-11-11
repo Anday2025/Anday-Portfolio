@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <meta
+      name="description"
+      content="Anday Semere – dataingeniør med interesse for Azure, IT-drift og automatisering."
+    />
+    <title>Anday Semere | Azure & Cloud</title>
+    <link
+      rel="icon"
+      href="assets/favicon.svg"
+      type="image/svg+xml"
+    />
+    <link
+      rel="stylesheet"
+      href="styles.css"
+    />
+    <script
+      src="script.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <div class="site">
+      <a
+        class="skip"
+        href="#main"
+      >
+        <span data-i18n="skip">Hopp til innhold</span>
+      </a>
+      <header>
+        <button
+          class="menu"
+          aria-expanded="false"
+          aria-controls="navigation"
+          data-i18n-aria="menu"
+        >
+          ☰
+        </button>
+        <nav
+          id="navigation"
+          aria-label="Hovedmeny"
+        >
+          <a href="index.html#home"><span data-i18n="home">Hjem</span></a>
+          <a href="index.html#projects"><span data-i18n="projects">Prosjekter</span></a>
+          <a href="index.html#about"><span data-i18n="about">Om meg</span></a>
+          <a href="index.html#skills"><span data-i18n="skills">Kompetanse</span></a>
+          <a href="index.html#contact"><span data-i18n="contact">Kontakt</span></a>
+        </nav>
+        <div
+          class="languages"
+          role="group"
+          aria-label="Language"
+        >
+          <svg
+            class="language-icon"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <circle cx="12" cy="12" r="9" />
+            <ellipse cx="12" cy="12" rx="4" ry="9" />
+            <path d="M3 12h18" />
+          </svg>
+          <button
+            data-lang="no"
+            aria-pressed="true"
+          >
+            NO
+          </button>
+          <span class="language-separator" aria-hidden="true">|</span>
+          <button
+            data-lang="en"
+            aria-pressed="false"
+          >
+            EN
+          </button>
+        </div>
+      </header>
+      <main id="main">
+        <section
+          id="home"
+          class="hero"
+        >
+          <div class="hero-copy">
+
+            <h1 class="hero-title">
+              Anday S. Berhe
+            </h1>
+
+            <p class="hero-subtitle" data-i18n="heroSubtitle">
+              Dataingeniør | Azure og IT-drift
+            </p>
+
+            <p class="hero-description" data-i18n="heroDescription">
+              Motivert for å utvikle meg innen skyteknologi,
+              IT-infrastruktur og sikker drift.
+            </p>
+
+          </div>
+        </section>
+        <section id="projects">
+          <div class="section-label">
+            <svg
+              class="icon"
+              aria-hidden="true"
+            >
+              <use href="assets/icons.svg#code" />
+            </svg>
+            <span data-i18n="projects">Prosjekter</span>
+          </div>
+          <div class="project-grid">
+            <a
+              class="project-card"
+              href="azure-storage.html"
+            >
+              <div class="project-art azure-storage">
+                <svg
+                  class="icon"
+                  aria-hidden="true"
+                >
+                  <use href="assets/icons.svg#storage" /></svg
+                ><svg
+                  class="icon external"
+                  aria-hidden="true"
+                >
+                  <use href="assets/icons.svg#external" />
+                </svg>
+              </div>
+              <div class="card-copy">
+                <h3>Azure Storage Lab</h3>
+                <p data-i18n="homeStorage">
+                  Privat Blob-lagring med Entra ID, RBAC, overvåking og kostnadskontroll.
+                </p>
+                <div class="tags">
+                  <span>Azure Storage</span>
+                  <span>Microsoft Entra ID</span>
+                  <span>RBAC</span>
+                </div>
+                <span class="project-link">
+                  <span data-i18n="details">Utforsk prosjektet</span>
+                  →
+                </span>
+              </div>
+            </a>
+            <a
+              class="project-card"
+              href="azure-bicep.html"
+            >
+              <div class="project-art azure-bicep">
+                <svg
+                  class="icon"
+                  aria-hidden="true"
+                >
+                  <use href="assets/icons.svg#code" /></svg
+                ><svg
+                  class="icon external"
+                  aria-hidden="true"
+                >
+                  <use href="assets/icons.svg#external" />
+                </svg>
+              </div>
+              <div class="card-copy">
+                <h3>Azure Bicep – Infrastructure as Code</h3>
+                <p data-i18n="homeBicep">
+                  Azure-ressurser definert og administrert med Bicep og Azure CLI.
+                </p>
+                <div class="tags">
+                  <span>Azure Bicep</span>
+                  <span>Azure CLI</span>
+                  <span>Infrastructure as Code</span>
+                </div>
+                <span class="project-link">
+                  <span data-i18n="details">Utforsk prosjektet</span>
+                  →
+                </span>
+              </div>
+            </a>
+            <article class="project-card">
+              <a
+                class="project-card-link"
+                href="job-tracker.html"
+              >
+                <div class="project-art job-tracker">
+                  <svg
+                    class="icon"
+                    aria-hidden="true"
+                  >
+                    <use href="assets/icons.svg#chart" /></svg
+                  ><svg
+                    class="icon external"
+                    aria-hidden="true"
+                  >
+                    <use href="assets/icons.svg#external" />
+                  </svg>
+                </div>
+                <div class="card-copy">
+                  <h3>Job Tracker</h3>
+                  <p data-i18n="job-tracker">
+                    Fullstack webapplikasjon for å administrere jobbsøknader.
+                  </p>
+                  <div class="tags">
+                    <span>Java</span>
+                    <span>Spring Boot</span>
+                    <span>PostgreSQL</span>
+                  </div>
+                  <span class="project-link">
+                    <span data-i18n="details">Utforsk prosjektet</span>
+                    →
+                  </span>
+                </div>
+              </a>
+            </article>
+            <article class="project-card">
+              <a
+                class="project-card-link"
+                href="cleanplan.html"
+              >
+                <div class="project-art cleanplan">
+                  <svg
+                    class="icon"
+                    aria-hidden="true"
+                  >
+                    <use href="assets/icons.svg#calendar" /></svg
+                  ><svg
+                    class="icon external"
+                    aria-hidden="true"
+                  >
+                    <use href="assets/icons.svg#external" />
+                  </svg>
+                </div>
+                <div class="card-copy">
+                  <h3>CleanPlan</h3>
+                  <p data-i18n="homeCleanPlan">
+                    Administrasjon av eiendommer, oppgaver, brukere og tilganger.
+                  </p>
+                  <div class="tags">
+                    <span>Supabase</span>
+                    <span>PostgreSQL</span>
+                    <span>HTML</span>
+                  </div>
+                  <span class="project-link">
+                    <span data-i18n="details">Utforsk prosjektet</span>
+                    →
+                  </span>
+                </div>
+              </a>
+            </article>
+          </div>
+        </section>
+        <section id="about">
+          <div class="section-label">
+            <svg
+              class="icon"
+              aria-hidden="true"
+            >
+              <use href="assets/icons.svg#user" />
+            </svg>
+            <span data-i18n="about">Om meg</span>
+          </div>
+          <div class="about-grid">
+            <div class="portrait">
+              <img
+                src="assets/images/anday.webp"
+                width="648"
+                height="864"
+                alt="Portrett av Anday Semere i mørk dressjakke og hvit skjorte."
+                data-i18n-alt="portraitalt"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div>
+              <h2 data-i18n="abouttitle">Kort om meg</h2>
+              <p data-i18n="homeAbout">
+                Jeg har en bachelor i dataingeniørfag fra Høgskulen på Vestlandet og en
+                sterk interesse for IT-drift, serveradministrasjon, Microsoft Azure og
+                informasjonssikkerhet.
+              </p>
+              <ul class="facts">
+                <li>
+                  <svg
+                    class="icon"
+                    aria-hidden="true"
+                  >
+                    <use href="assets/icons.svg#award" />
+                  </svg>
+                  <span data-i18n="homeCertification">
+                    AZ-900 fullført · arbeider mot AZ-104.
+                  </span>
+                </li>
+                <li>
+                  <svg
+                    class="icon"
+                    aria-hidden="true"
+                  >
+                    <use href="assets/icons.svg#cloud" />
+                  </svg>
+                  <span data-i18n="homeExperience">
+                    Praktisk erfaring fra egne Azure- og utviklingsprosjekter.
+                  </span>
+                </li>
+                <li>
+                  <svg
+                    class="icon"
+                    aria-hidden="true"
+                  >
+                    <use href="assets/icons.svg#user" />
+                  </svg>
+                  <span data-i18n="homeHealthcare">
+                    11 år i helsevesenet.
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section id="skills">
+          <div class="section-label">
+            <svg
+              class="icon"
+              aria-hidden="true"
+            >
+              <use href="assets/icons.svg#network" />
+            </svg>
+            <span data-i18n="skills">Kompetanse</span>
+          </div>
+          <h2 data-i18n="skilltitle">Fagområder jeg utvikler meg innen</h2>
+          <div class="skills-grid">
+            <div class="skill">
+              <svg
+                class="icon"
+                aria-hidden="true"
+              >
+                <use href="assets/icons.svg#server" />
+              </svg>
+              <span data-i18n="skillOperations">IT-drift</span>
+            </div>
+            <div class="skill">
+              <svg
+                class="icon"
+                aria-hidden="true"
+              >
+                <use href="assets/icons.svg#network" />
+              </svg>
+              <span data-i18n="skillInfrastructure">IT-infrastruktur</span>
+            </div>
+            <div class="skill">
+              <svg
+                class="icon"
+                aria-hidden="true"
+              >
+                <use href="assets/icons.svg#cloud" />
+              </svg>
+              <span data-i18n="skillAzure">Microsoft Azure</span>
+            </div>
+            <div class="skill">
+              <svg
+                class="icon"
+                aria-hidden="true"
+              >
+                <use href="assets/icons.svg#shield" />
+              </svg>
+              <span data-i18n="skillSecurity">IT-sikkerhet</span>
+            </div>
+          </div>
+        </section>
+        <section id="certifications">
+          <div class="section-label">
+            <svg
+              class="icon"
+              aria-hidden="true"
+            >
+              <use href="assets/icons.svg#award" />
+            </svg>
+            <span data-i18n="certs">Sertifiseringer</span>
+          </div>
+          <div class="cert-grid">
+            <div class="cert">
+              <svg
+                class="icon"
+                aria-hidden="true"
+              >
+                <use href="assets/icons.svg#award" />
+              </svg>
+              <div>
+                <h3>
+                  AZ-900
+                  <span class="status complete">
+                    ✓
+                    <span data-i18n="done">Fullført</span>
+                  </span>
+                </h3>
+                <p>Microsoft Azure Fundamentals</p>
+              </div>
+            </div>
+            <div class="cert">
+              <svg
+                class="icon"
+                aria-hidden="true"
+              >
+                <use href="assets/icons.svg#award" />
+              </svg>
+              <div>
+                <h3>
+                  AZ-104
+                  <span class="status">
+                    ◌
+                    <span data-i18n="progress">Under arbeid</span>
+                  </span>
+                </h3>
+                <p>Microsoft Azure Administrator</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="contact">
+          <div class="section-label">
+            <svg
+              class="icon"
+              aria-hidden="true"
+            >
+              <use href="assets/icons.svg#mail" />
+            </svg>
+            <span data-i18n="contact">Kontakt</span>
+          </div>
+          <div class="contact-grid">
+            <a href="mailto:andaysemere568@yahoo.com">
+              <svg
+                class="icon"
+                aria-hidden="true"
+              >
+                <use href="assets/icons.svg#mail" />
+              </svg>
+              <strong><span data-i18n="email">E-post</span></strong>
+              <span>andaysemere568@yahoo.com</span>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/anday-semere-berhe/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="social">in</span>
+              <strong>LinkedIn ↗</strong>
+              <span>anday-semere-berhe</span>
+            </a>
+            <a
+              href="https://github.com/Anday2025"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg
+                class="icon"
+                aria-hidden="true"
+              >
+                <use href="assets/icons.svg#code" />
+              </svg>
+              <strong>GitHub ↗</strong>
+              <span>Anday2025</span>
+            </a>
+          </div>
+        </section>
+      </main>
+      <footer>
+        ©
+        <span id="year"></span>
+        Anday S. Berhe
+      </footer>
+    </div>
+  </body>
+</html>

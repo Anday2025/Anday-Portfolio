@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+  <symbol
+    id="cloud"
+    viewBox="0 0 48 48"
+  >
+    <path d="M7 30a10 10 0 0 1 0-20 14 14 0 0 1 27-2 11 11 0 0 1 1 22Z" />
+  </symbol>
+  <symbol
+    id="storage"
+    viewBox="0 0 48 48"
+  >
+    <path d="M7 9c0-8 32-8 32 0v28c0 8-32 8-32 0ZM7 9c0 8 32 8 32 0M7 22c0 8 32 8 32 0" />
+  </symbol>
+  <symbol
+    id="code"
+    viewBox="0 0 48 48"
+  >
+    <path d="m16 12-12 12 12 12m16-24 12 12-12 12M28 6l-8 36" />
+  </symbol>
+  <symbol
+    id="chart"
+    viewBox="0 0 48 48"
+  >
+    <path d="M5 5h38v30H5ZM0 42h48M14 28v-8m10 8V12m10 16V17" />
+  </symbol>
+  <symbol
+    id="calendar"
+    viewBox="0 0 48 48"
+  >
+    <path d="M8 9h32v33H8ZM15 3v12M33 3v12M16 28l6 6 12-14" />
+  </symbol>
+  <symbol
+    id="user"
+    viewBox="0 0 48 48"
+  >
+    <path d="M24 24a9 9 0 1 0 0-18 9 9 0 0 0 0 18ZM7 44c0-20 34-20 34 0Z" />
+  </symbol>
+  <symbol
+    id="shield"
+    viewBox="0 0 48 48"
+  >
+    <path d="M24 3 6 10v13c0 12 18 21 18 21s18-9 18-21V10ZM15 24l6 6 12-13" />
+  </symbol>
+  <symbol
+    id="mail"
+    viewBox="0 0 48 48"
+  >
+    <path d="M4 9h40v30H4ZM4 10l20 16 20-16" />
+  </symbol>
+  <symbol
+    id="network"
+    viewBox="0 0 48 48"
+  >
+    <path d="M24 10v15M10 35V25h28v10M19 2h10v10H19ZM4 35h12v10H4ZM32 35h12v10H32" />
+  </symbol>
+  <symbol
+    id="server"
+    viewBox="0 0 48 48"
+  >
+    <path d="M5 5h38v14H5ZM5 29h38v14H5ZM11 12h1m5 0h1M11 36h1m5 0h1" />
+  </symbol>
+  <symbol
+    id="terminal"
+    viewBox="0 0 48 48"
+  >
+    <path d="m10 12 12 12-12 12m17 0h12" />
+  </symbol>
+  <symbol
+    id="award"
+    viewBox="0 0 48 48"
+  >
+    <path d="M24 3 7 10v15c0 10 17 20 17 20s17-10 17-20V10Z" />
+  </symbol>
+  <symbol
+    id="external"
+    viewBox="0 0 48 48"
+  >
+    <path d="M28 4h16v16M44 4 22 26M20 8H5v35h35V28" />
+  </symbol>
+</svg>

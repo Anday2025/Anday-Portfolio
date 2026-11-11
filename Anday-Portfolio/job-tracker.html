@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <meta
+      name="description"
+      content="Anday Semere – dataingeniør med interesse for Azure, IT-drift og automatisering."
+    />
+    <title>Job Tracker | Anday Portfolio</title>
+    <link
+      rel="icon"
+      href="assets/favicon.svg"
+      type="image/svg+xml"
+    />
+    <link
+      rel="stylesheet"
+      href="styles.css"
+    />
+    <script
+      src="script.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <div class="site">
+      <a
+        class="skip"
+        href="#main"
+      >
+        <span data-i18n="skip">Hopp til innhold</span>
+      </a>
+      <header>
+        <button
+          class="menu"
+          aria-expanded="false"
+          aria-controls="navigation"
+          data-i18n-aria="menu"
+        >
+          ☰
+        </button>
+        <nav
+          id="navigation"
+          aria-label="Hovedmeny"
+        >
+          <a href="index.html#home"><span data-i18n="home">Hjem</span></a>
+          <a href="index.html#projects"><span data-i18n="projects">Prosjekter</span></a>
+          <a href="index.html#about"><span data-i18n="about">Om meg</span></a>
+          <a href="index.html#skills"><span data-i18n="skills">Kompetanse</span></a>
+          <a href="index.html#contact"><span data-i18n="contact">Kontakt</span></a>
+        </nav>
+        <div
+          class="languages"
+          role="group"
+          aria-label="Language"
+        >
+          <svg
+            class="language-icon"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <circle cx="12" cy="12" r="9" />
+            <ellipse cx="12" cy="12" rx="4" ry="9" />
+            <path d="M3 12h18" />
+          </svg>
+          <button
+            data-lang="no"
+            aria-pressed="true"
+          >
+            NO
+          </button>
+          <span class="language-separator" aria-hidden="true">|</span>
+          <button
+            data-lang="en"
+            aria-pressed="false"
+          >
+            EN
+          </button>
+        </div>
+      </header>
+      <main
+        id="main"
+        class="detail"
+      >
+        <a
+          class="back"
+          href="index.html#projects"
+        >
+          ←
+          <span data-i18n="back">Tilbake til prosjekter</span>
+        </a>
+        <div class="detail-hero">
+          <svg
+            class="icon "
+            aria-hidden="true"
+          >
+            <use href="assets/icons.svg#chart" />
+          </svg>
+          <p class="eyebrow">
+            ANDAY PORTFOLIO /
+            <span data-i18n="projects">Prosjekter</span>
+          </p>
+          <h1>Job Tracker</h1>
+          <p data-i18n="job-tracker">
+            Fullstack webapplikasjon for å administrere jobbsøknader.
+          </p>
+        </div>
+        <section
+          class="project-overview"
+          aria-labelledby="project-about-heading"
+        >
+          <div class="project-overview-heading">
+            <svg
+              class="icon"
+              aria-hidden="true"
+            >
+              <use href="assets/icons.svg#chart" />
+            </svg>
+            <h2
+              id="project-about-heading"
+              data-i18n="projectabout"
+            >
+              Om prosjektet
+            </h2>
+          </div>
+          <p data-i18n="job-tracker-about">
+            Job Tracker er en fullstack-applikasjon som gir struktur og oversikt i
+            jobbsøkerprosessen. Brukere kan registrere seg, logge inn og administrere egne
+            jobbsøknader fra en samlet søknadsoversikt.
+          </p>
+          <div class="project-overview-grid">
+            <div class="project-work">
+              <h3 data-i18n="projectwork">Dette har jeg arbeidet med</h3>
+              <ul>
+                <li>
+                  <svg
+                    class="icon"
+                    aria-hidden="true"
+                  >
+                    <use href="assets/icons.svg#shield" />
+                  </svg>
+                  <span data-i18n="job-tracker-work-0">
+                    Implementert registrering og innlogging med Spring Security og
+                    JWT-basert autentisering.
+                  </span>
+                </li>
+                <li>
+                  <svg
+                    class="icon"
+                    aria-hidden="true"
+                  >
+                    <use href="assets/icons.svg#shield" />
+                  </svg>
+                  <span data-i18n="job-tracker-work-1">
+                    Utviklet en søknadsoversikt for å opprette, vise og administrere
+                    jobbsøknader.
+                  </span>
+                </li>
+                <li>
+                  <svg
+                    class="icon"
+                    aria-hidden="true"
+                  >
+                    <use href="assets/icons.svg#shield" />
+                  </svg>
+                  <span data-i18n="job-tracker-work-2">
+                    Lagt til statusoppdatering og filtrering etter søknadsstatus.
+                  </span>
+                </li>
+                <li>
+                  <svg
+                    class="icon"
+                    aria-hidden="true"
+                  >
+                    <use href="assets/icons.svg#shield" />
+                  </svg>
+                  <span data-i18n="job-tracker-work-3">
+                    Koblet et HTML-, CSS- og JavaScript-grensesnitt til en Spring
+                    Boot-backend og PostgreSQL-database.
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <aside class="project-competence">
+              <svg
+                class="icon"
+                aria-hidden="true"
+              >
+                <use href="assets/icons.svg#cloud" />
+              </svg>
+              <h3 data-i18n="projectskills">Praktisk kompetanse</h3>
+              <p data-i18n="job-tracker-skills">
+                Prosjektet demonstrerer fullstack-utvikling, autentisering,
+                databasehåndtering og samspillet mellom frontend og backend. Det viser
+                praktisk arbeid med en publisert webapplikasjon og en strukturert flyt for
+                å håndtere brukerens data.
+              </p>
+              <div class="project-status">
+                <span data-i18n="projectdeveloping">
+                  Publisert · under videre utvikling
+                </span>
+              </div>
+              <p data-i18n="job-tracker-note">
+                En MVP er publisert. Applikasjonen er under videre utvikling.
+              </p>
+            </aside>
+          </div>
+          <div class="project-tools">
+            <h3 data-i18n="projecttools">Teknologier og verktøy</h3>
+            <div class="tags">
+              <span>Java</span>
+              <span>Spring Boot</span>
+              <span>PostgreSQL</span>
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Spring Security</span>
+              <span>JWT</span>
+            </div>
+          </div>
+          <div class="project-resources">
+            <h3 data-i18n="projectresources">Kode og dokumentasjon</h3>
+            <p data-i18n="projectresourcesintro">
+              Se kildekode og prosjektdokumentasjon på GitHub.
+            </p>
+            <div class="actions">
+              <a
+                class="button primary"
+                href="https://www.jobbsokertracking.no/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span data-i18n="openwebsite">Åpne nettside</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+              <a
+                class="button"
+                href="https://github.com/Anday2025/jobbsokertracking"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span data-i18n="projectgithubcode">Se kode på GitHub</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        ©
+        <span id="year"></span>
+        Anday Semere
+      </footer>
+    </div>
+  </body>
+</html>

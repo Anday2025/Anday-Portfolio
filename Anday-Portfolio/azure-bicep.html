@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <meta
+      name="description"
+      content="Anday Semere – dataingeniør med interesse for Azure, IT-drift og automatisering."
+    />
+    <title>Azure Bicep – Infrastructure as Code | Anday Portfolio</title>
+    <link
+      rel="icon"
+      href="assets/favicon.svg"
+      type="image/svg+xml"
+    />
+    <link
+      rel="stylesheet"
+      href="styles.css"
+    />
+    <script
+      src="script.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <div class="site">
+      <a
+        class="skip"
+        href="#main"
+      >
+        <span data-i18n="skip">Hopp til innhold</span>
+      </a>
+      <header>
+        <button
+          class="menu"
+          aria-expanded="false"
+          aria-controls="navigation"
+          data-i18n-aria="menu"
+        >
+          ☰
+        </button>
+        <nav
+          id="navigation"
+          aria-label="Hovedmeny"
+        >
+          <a href="index.html#home"><span data-i18n="home">Hjem</span></a>
+          <a href="index.html#projects"><span data-i18n="projects">Prosjekter</span></a>
+          <a href="index.html#about"><span data-i18n="about">Om meg</span></a>
+          <a href="index.html#skills"><span data-i18n="skills">Kompetanse</span></a>
+          <a href="index.html#contact"><span data-i18n="contact">Kontakt</span></a>
+        </nav>
+        <div
+          class="languages"
+          role="group"
+          aria-label="Language"
+        >
+          <svg
+            class="language-icon"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <circle cx="12" cy="12" r="9" />
+            <ellipse cx="12" cy="12" rx="4" ry="9" />
+            <path d="M3 12h18" />
+          </svg>
+          <button
+            data-lang="no"
+            aria-pressed="true"
+          >
+            NO
+          </button>
+          <span class="language-separator" aria-hidden="true">|</span>
+          <button
+            data-lang="en"
+            aria-pressed="false"
+          >
+            EN
+          </button>
+        </div>
+      </header>
+      <main
+        id="main"
+        class="detail"
+      >
+        <a
+          class="back"
+          href="index.html#projects"
+        >
+          ←
+          <span data-i18n="back">Tilbake til prosjekter</span>
+        </a>
+        <div class="detail-hero">
+          <svg
+            class="icon "
+            aria-hidden="true"
+          >
+            <use href="assets/icons.svg#code" />
+          </svg>
+          <p class="eyebrow">
+            ANDAY PORTFOLIO /
+            <span data-i18n="projects">Prosjekter</span>
+          </p>
+          <h1>Azure Bicep – Infrastructure as Code</h1>
+          <p data-i18n="azure-bicep">
+            Praktisk prosjekt for å lære automatisert opprettelse og administrasjon av
+            Azure-ressurser ved hjelp av Bicep og Azure CLI.
+          </p>
+        </div>
+        <section
+          class="project-overview"
+          aria-labelledby="project-about-heading"
+        >
+          <div class="project-overview-heading">
+            <svg
+              class="icon"
+              aria-hidden="true"
+            >
+              <use href="assets/icons.svg#code" />
+            </svg>
+            <h2
+              id="project-about-heading"
+              data-i18n="projectabout"
+            >
+              Om prosjektet
+            </h2>
+          </div>
+          <p data-i18n="azure-bicep-about">
+            Jeg bruker Azure Bicep og Azure CLI til å definere, opprette og administrere
+            Azure-ressurser med Infrastructure as Code. I denne laben har jeg opprettet og
+            oppdatert en Storage Account gjennom kode, med validering og forhåndsvisning
+            av endringer før utrulling.
+          </p>
+          <div class="project-overview-grid">
+            <div class="project-work">
+              <h3 data-i18n="projectwork">Dette har jeg arbeidet med</h3>
+              <ul>
+                <li>
+                  <svg
+                    class="icon"
+                    aria-hidden="true"
+                  >
+                    <use href="assets/icons.svg#shield" />
+                  </svg>
+                  <span data-i18n="azure-bicep-work-0">
+                    Definerte en Storage Account i en Bicep-mal med parametere,
+                    sikkerhetsinnstillinger og ressursmerking.
+                  </span>
+                </li>
+                <li>
+                  <svg
+                    class="icon"
+                    aria-hidden="true"
+                  >
+                    <use href="assets/icons.svg#shield" />
+                  </svg>
+                  <span data-i18n="azure-bicep-work-1">
+                    Kompilerte Bicep til en ARM-mal og validerte konfigurasjonen med Azure
+                    CLI.
+                  </span>
+                </li>
+                <li>
+                  <svg
+                    class="icon"
+                    aria-hidden="true"
+                  >
+                    <use href="assets/icons.svg#shield" />
+                  </svg>
+                  <span data-i18n="azure-bicep-work-2">
+                    Brukte What-If før utrulling, og opprettet og oppdaterte
+                    lagringskontoen via Azure CLI.
+                  </span>
+                </li>
+                <li>
+                  <svg
+                    class="icon"
+                    aria-hidden="true"
+                  >
+                    <use href="assets/icons.svg#shield" />
+                  </svg>
+                  <span data-i18n="azure-bicep-work-3">
+                    Kontrollerte gjentatt utrulling med What-If og dokumenterte resultatet
+                    av sikkerhetskonfigurasjon og ressursmerking.
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <aside class="project-competence">
+              <svg
+                class="icon"
+                aria-hidden="true"
+              >
+                <use href="assets/icons.svg#cloud" />
+              </svg>
+              <h3 data-i18n="projectskills">Praktisk kompetanse</h3>
+              <p data-i18n="azure-bicep-skills">
+                Prosjektet demonstrerer deklarativ ressursadministrasjon, automatisert
+                utrulling og kontroll av infrastrukturendringer. Praktiske læringsmål er å
+                forstå parametere, validering, What-If og idempotens, slik at samme
+                konfigurasjon kan gjenskapes på en kontrollert måte.
+              </p>
+              <div class="project-status">
+                <span data-i18n="projectlearning">Praktisk lab · videre læring</span>
+              </div>
+              <p data-i18n="azure-bicep-note">
+                Den dokumenterte Storage-laben er gjennomført. Jeg fortsetter å utvikle
+                kompetansen min innen Bicep, Azure CLI og Infrastructure as Code.
+              </p>
+            </aside>
+          </div>
+          <div class="project-tools">
+            <h3 data-i18n="projecttools">Teknologier og verktøy</h3>
+            <div class="tags">
+              <span>Azure Bicep</span>
+              <span>Azure CLI</span>
+              <span>Azure Resource Manager</span>
+              <span>Azure Storage</span>
+              <span>Azure Cloud Shell</span>
+              <span>Git / GitHub</span>
+            </div>
+          </div>
+          <div class="project-resources">
+            <h3 data-i18n="projectresources">Kode og dokumentasjon</h3>
+            <p data-i18n="projectresourcesintro">
+              Se kildekode og prosjektdokumentasjon på GitHub.
+            </p>
+            <div class="actions">
+              <a
+                class="button primary"
+                href="https://github.com/Anday2025/azure-administration-labs/tree/main/02-bicep-storage-lab"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span data-i18n="projectgithubbicep">
+                  Se kode og dokumentasjon på GitHub
+                </span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        ©
+        <span id="year"></span>
+        Anday Semere
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <meta
+      name="description"
+      content="Anday Semere – dataingeniør med interesse for Azure, IT-drift og automatisering."
+    />
+    <title>Azure Storage Lab | Anday Portfolio</title>
+    <link
+      rel="icon"
+      href="assets/favicon.svg"
+      type="image/svg+xml"
+    />
+    <link
+      rel="stylesheet"
+      href="styles.css"
+    />
+    <script
+      src="script.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <div class="site">
+      <a
+        class="skip"
+        href="#main"
+      >
+        <span data-i18n="skip">Hopp til innhold</span>
+      </a>
+      <header>
+        <button
+          class="menu"
+          aria-expanded="false"
+          aria-controls="navigation"
+          data-i18n-aria="menu"
+        >
+          ☰
+        </button>
+        <nav
+          id="navigation"
+          aria-label="Hovedmeny"
+        >
+          <a href="index.html#home"><span data-i18n="home">Hjem</span></a>
+          <a href="index.html#projects"><span data-i18n="projects">Prosjekter</span></a>
+          <a href="index.html#about"><span data-i18n="about">Om meg</span></a>
+          <a href="index.html#skills"><span data-i18n="skills">Kompetanse</span></a>
+          <a href="index.html#contact"><span data-i18n="contact">Kontakt</span></a>
+        </nav>
+        <div
+          class="languages"
+          role="group"
+          aria-label="Language"
+        >
+          <svg
+            class="language-icon"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <circle cx="12" cy="12" r="9" />
+            <ellipse cx="12" cy="12" rx="4" ry="9" />
+            <path d="M3 12h18" />
+          </svg>
+          <button
+            data-lang="no"
+            aria-pressed="true"
+          >
+            NO
+          </button>
+          <span class="language-separator" aria-hidden="true">|</span>
+          <button
+            data-lang="en"
+            aria-pressed="false"
+          >
+            EN
+          </button>
+        </div>
+      </header>
+      <main
+        id="main"
+        class="detail"
+      >
+        <a
+          class="back"
+          href="index.html#projects"
+        >
+          ←
+          <span data-i18n="back">Tilbake til prosjekter</span>
+        </a>
+        <div class="detail-hero">
+          <svg
+            class="icon "
+            aria-hidden="true"
+          >
+            <use href="assets/icons.svg#storage" />
+          </svg>
+          <p class="eyebrow">
+            ANDAY PORTFOLIO /
+            <span data-i18n="projects">Prosjekter</span>
+          </p>
+          <h1>Azure Storage Lab</h1>
+          <p data-i18n="azure-storage">
+            Praktisk Azure-prosjekt med Storage Account, privat Blob Container, Microsoft
+            Entra ID, RBAC, overvåking, sikkerhet og kostnadskontroll.
+          </p>
+        </div>
+        <section
+          class="project-overview"
+          aria-labelledby="project-about-heading"
+        >
+          <div class="project-overview-heading">
+            <svg
+              class="icon"
+              aria-hidden="true"
+            >
+              <use href="assets/icons.svg#storage" />
+            </svg>
+            <h2
+              id="project-about-heading"
+              data-i18n="projectabout"
+            >
+              Om prosjektet
+            </h2>
+          </div>
+          <p data-i18n="azure-storage-about">
+            I dette prosjektet opprettet og administrerte jeg en Azure Storage Account med
+            en privat Blob Container. Formålet var å få praktisk erfaring med sikker
+            fillagring, identitetsbasert tilgang, overvåking og kostnadskontroll i Azure.
+          </p>
+          <div class="project-overview-grid">
+            <div class="project-work">
+              <h3 data-i18n="projectwork">Dette har jeg arbeidet med</h3>
+              <ul>
+                <li>
+                  <svg
+                    class="icon"
+                    aria-hidden="true"
+                  >
+                    <use href="assets/icons.svg#shield" />
+                  </svg>
+                  <span data-i18n="azure-storage-work-0">
+                    Opprettet en Storage Account og en privat Blob Container, og lastet
+                    opp en testfil.
+                  </span>
+                </li>
+                <li>
+                  <svg
+                    class="icon"
+                    aria-hidden="true"
+                  >
+                    <use href="assets/icons.svg#shield" />
+                  </svg>
+                  <span data-i18n="azure-storage-work-1">
+                    Administrerte tilgang med Microsoft Entra ID og RBAC på containernivå,
+                    og blokkerte anonym Blob-tilgang.
+                  </span>
+                </li>
+                <li>
+                  <svg
+                    class="icon"
+                    aria-hidden="true"
+                  >
+                    <use href="assets/icons.svg#shield" />
+                  </svg>
+                  <span data-i18n="azure-storage-work-2">
+                    Begrenset nettverkstilgang til valgte nettverk og IP-adresser, og
+                    arbeidet med soft delete for beskyttelse mot utilsiktet sletting.
+                  </span>
+                </li>
+                <li>
+                  <svg
+                    class="icon"
+                    aria-hidden="true"
+                  >
+                    <use href="assets/icons.svg#shield" />
+                  </svg>
+                  <span data-i18n="azure-storage-work-3">
+                    Brukte Azure Monitor til å følge transaksjoner, konfigurerte varsler
+                    og kontrollerte kostnader i Azure Cost Management.
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <aside class="project-competence">
+              <svg
+                class="icon"
+                aria-hidden="true"
+              >
+                <use href="assets/icons.svg#cloud" />
+              </svg>
+              <h3 data-i18n="projectskills">Praktisk kompetanse</h3>
+              <p data-i18n="azure-storage-skills">
+                Prosjektet demonstrerer praktisk administrasjon av Azure-lagring,
+                rollebasert tilgang, nettverksbegrensninger, databeskyttelse og
+                driftsovervåking. Det viser også hvordan sikkerhetsinnstillinger og
+                varsler kan kontrolleres i en avgrenset lab.
+              </p>
+              <div class="project-status">
+                <span data-i18n="projectlab">Praktisk laboratorieprosjekt</span>
+              </div>
+              <p data-i18n="azure-storage-note">
+                Gjennomført som laboratorieøvelse, ikke som en produksjonsløsning.
+              </p>
+            </aside>
+          </div>
+          <div class="project-tools">
+            <h3 data-i18n="projecttools">Teknologier og verktøy</h3>
+            <div class="tags">
+              <span>Azure Storage</span>
+              <span>Blob Storage</span>
+              <span>Microsoft Entra ID</span>
+              <span>Azure RBAC</span>
+              <span>Azure Monitor</span>
+              <span>Azure Cost Management</span>
+              <span>Azure Portal</span>
+            </div>
+          </div>
+          <div class="project-resources">
+            <h3 data-i18n="projectresources">Kode og dokumentasjon</h3>
+            <p data-i18n="projectresourcesintro">
+              Se kildekode og prosjektdokumentasjon på GitHub.
+            </p>
+            <div class="actions">
+              <a
+                class="button primary"
+                href="https://github.com/Anday2025/azure-administration-labs/blob/main/01-azure-storage/README.md"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span data-i18n="projectgithubdocs">Se dokumentasjon på GitHub</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        ©
+        <span id="year"></span>
+        Anday Semere
+      </footer>
+    </div>
+  </body>
+</html>

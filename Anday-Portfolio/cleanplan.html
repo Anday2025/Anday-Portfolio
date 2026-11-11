@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    />
+    <meta
+      name="description"
+      content="Anday Semere – dataingeniør med interesse for Azure, IT-drift og automatisering."
+    />
+    <title>CleanPlan | Anday Portfolio</title>
+    <link
+      rel="icon"
+      href="assets/favicon.svg"
+      type="image/svg+xml"
+    />
+    <link
+      rel="stylesheet"
+      href="styles.css"
+    />
+    <script
+      src="script.js"
+      defer
+    ></script>
+  </head>
+  <body>
+    <div class="site">
+      <a
+        class="skip"
+        href="#main"
+      >
+        <span data-i18n="skip">Hopp til innhold</span>
+      </a>
+      <header>
+        <button
+          class="menu"
+          aria-expanded="false"
+          aria-controls="navigation"
+          data-i18n-aria="menu"
+        >
+          ☰
+        </button>
+        <nav
+          id="navigation"
+          aria-label="Hovedmeny"
+        >
+          <a href="index.html#home"><span data-i18n="home">Hjem</span></a>
+          <a href="index.html#projects"><span data-i18n="projects">Prosjekter</span></a>
+          <a href="index.html#about"><span data-i18n="about">Om meg</span></a>
+          <a href="index.html#skills"><span data-i18n="skills">Kompetanse</span></a>
+          <a href="index.html#contact"><span data-i18n="contact">Kontakt</span></a>
+        </nav>
+        <div
+          class="languages"
+          role="group"
+          aria-label="Language"
+        >
+          <svg
+            class="language-icon"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <circle cx="12" cy="12" r="9" />
+            <ellipse cx="12" cy="12" rx="4" ry="9" />
+            <path d="M3 12h18" />
+          </svg>
+          <button
+            data-lang="no"
+            aria-pressed="true"
+          >
+            NO
+          </button>
+          <span class="language-separator" aria-hidden="true">|</span>
+          <button
+            data-lang="en"
+            aria-pressed="false"
+          >
+            EN
+          </button>
+        </div>
+      </header>
+      <main
+        id="main"
+        class="detail"
+      >
+        <a
+          class="back"
+          href="index.html#projects"
+        >
+          ←
+          <span data-i18n="back">Tilbake til prosjekter</span>
+        </a>
+        <div class="detail-hero">
+          <svg
+            class="icon "
+            aria-hidden="true"
+          >
+            <use href="assets/icons.svg#calendar" />
+          </svg>
+          <p class="eyebrow">
+            ANDAY PORTFOLIO /
+            <span data-i18n="projects">Prosjekter</span>
+          </p>
+          <h1>CleanPlan</h1>
+          <p data-i18n="cleanplan">
+            Webapplikasjon for administrasjon av eiendommer, brukere, oppgaver og
+            tilgangsstyring.
+          </p>
+        </div>
+        <section
+          class="project-overview"
+          aria-labelledby="project-about-heading"
+        >
+          <div class="project-overview-heading">
+            <svg
+              class="icon"
+              aria-hidden="true"
+            >
+              <use href="assets/icons.svg#calendar" />
+            </svg>
+            <h2
+              id="project-about-heading"
+              data-i18n="projectabout"
+            >
+              Om prosjektet
+            </h2>
+          </div>
+          <p data-i18n="cleanplan-about">
+            CleanPlan er en webapplikasjon for administrasjon av eiendommer, oppgaver,
+            brukere og tilgangsstyring. Formålet er å samle eiendomsadministrasjon og
+            oppfølging av oppgaver i ett grensesnitt, med ulike visninger for ulike
+            brukerroller.
+          </p>
+          <div class="project-overview-grid">
+            <div class="project-work">
+              <h3 data-i18n="projectwork">Dette har jeg arbeidet med</h3>
+              <ul>
+                <li>
+                  <svg
+                    class="icon"
+                    aria-hidden="true"
+                  >
+                    <use href="assets/icons.svg#shield" />
+                  </svg>
+                  <span data-i18n="cleanplan-work-0">
+                    Utviklet grensesnitt for administrasjon av flere eiendommer og
+                    tilhørende brukere.
+                  </span>
+                </li>
+                <li>
+                  <svg
+                    class="icon"
+                    aria-hidden="true"
+                  >
+                    <use href="assets/icons.svg#shield" />
+                  </svg>
+                  <span data-i18n="cleanplan-work-1">
+                    Arbeidet med rollebasert tilgangsstyring og egne visninger for
+                    administratorer og beboere.
+                  </span>
+                </li>
+                <li>
+                  <svg
+                    class="icon"
+                    aria-hidden="true"
+                  >
+                    <use href="assets/icons.svg#shield" />
+                  </svg>
+                  <span data-i18n="cleanplan-work-2">
+                    Laget funksjonalitet for organisering og oppfølging av oppgaver
+                    knyttet til eiendommer.
+                  </span>
+                </li>
+                <li>
+                  <svg
+                    class="icon"
+                    aria-hidden="true"
+                  >
+                    <use href="assets/icons.svg#shield" />
+                  </svg>
+                  <span data-i18n="cleanplan-work-3">
+                    Brukt Supabase og PostgreSQL sammen med HTML, CSS og JavaScript for
+                    lagring og presentasjon av data.
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <aside class="project-competence">
+              <svg
+                class="icon"
+                aria-hidden="true"
+              >
+                <use href="assets/icons.svg#cloud" />
+              </svg>
+              <h3 data-i18n="projectskills">Praktisk kompetanse</h3>
+              <p data-i18n="cleanplan-skills">
+                Prosjektet demonstrerer arbeid med datadrevne webgrensesnitt, brukerroller
+                og sammenhengen mellom eiendommer, oppgaver og brukere. Det gir praktisk
+                erfaring med å strukturere administrasjonsflyter og arbeide med tilgang
+                til data.
+              </p>
+              <div class="project-status">
+                <span data-i18n="projectdeveloping">
+                  Publisert · under videre utvikling
+                </span>
+              </div>
+              <p data-i18n="cleanplan-note">
+                Applikasjonen er under videre utvikling. Beskrivelsen gjelder
+                funksjonaliteten jeg har arbeidet med, og innebærer ikke at alle
+                funksjoner er ferdigstilt.
+              </p>
+            </aside>
+          </div>
+          <div class="project-tools">
+            <h3 data-i18n="projecttools">Teknologier og verktøy</h3>
+            <div class="tags">
+              <span>Supabase</span>
+              <span>PostgreSQL</span>
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+          <div class="project-resources">
+            <h3 data-i18n="projectresources">Kode og dokumentasjon</h3>
+            <p data-i18n="projectresourcesintro">
+              Se kildekode og prosjektdokumentasjon på GitHub.
+            </p>
+            <div class="actions">
+              <a
+                class="button primary"
+                href="https://anday2025.github.io/CleanPlan/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span data-i18n="openwebsite">Åpne nettside</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+              <a
+                class="button"
+                href="https://github.com/Anday2025/CleanPlan"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <span data-i18n="projectgithubcode">Se kode på GitHub</span>
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        ©
+        <span id="year"></span>
+        Anday Semere
+      </footer>
+    </div>
+  </body>
+</html>
