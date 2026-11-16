@@ -494,12 +494,6 @@ button:focus-visible {
   float: right;
   margin: 20px;
 }
-.eyebrow {
-  font-size: 12px;
-  letter-spacing: 2px;
-  color: var(--cyan);
-  margin-bottom: 20px;
-}
 .detail-hero h1 {
   font-size: 42px;
   max-width: 800px;
@@ -1307,4 +1301,170 @@ footer {
   text-align: center;
   font-size: clamp(2rem, 4vw, 3rem);
   line-height: 1.2;
+}
+/* Project carousel: three complete cards on desktop, native scrolling on every size. */
+#projects .project-carousel {
+  min-width: 0;
+  max-width: 100%;
+}
+#projects .project-track {
+  --project-visible: 3;
+  --project-gap: 20px;
+  position: relative;
+  display: grid;
+  grid-template-columns: none;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% - (var(--project-visible) - 1) * var(--project-gap)) / var(--project-visible));
+  gap: var(--project-gap);
+  width: 100%;
+  min-width: 0;
+  padding: 6px 0 14px;
+  margin: 8px 0 0;
+  list-style: none;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #2b82a1 #dce5ed;
+}
+#projects .project-slide {
+  display: flex;
+  min-width: 0;
+  scroll-snap-align: start;
+}
+#projects .project-slide > .project-card {
+  flex: 1;
+  width: 100%;
+  min-width: 0;
+  box-shadow: 0 3px 12px #002b461a;
+}
+#projects .project-card-link {
+  min-width: 0;
+}
+#projects .project-art {
+  height: auto;
+  aspect-ratio: 16 / 10;
+  flex-shrink: 0;
+}
+#projects .project-art::before,
+#projects .project-art::after {
+  display: none;
+}
+#projects .project-art > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+#projects .card-copy {
+  padding: 20px;
+}
+#projects .card-copy h3 {
+  font-size: 21px;
+}
+#projects .card-copy p {
+  font-size: 14px;
+}
+#projects .project-track:focus-visible {
+  outline: 2px solid #075bac;
+  outline-offset: 4px;
+  border-radius: 18px;
+}
+#projects .project-track.is-dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+  cursor: grabbing;
+  user-select: none;
+}
+#projects .carousel-controls:not([hidden]) {
+  display: flex;
+}
+#projects .carousel-controls {
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-top: 12px;
+}
+#projects .carousel-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+#projects .carousel-dot {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 40px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+#projects .carousel-dot::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 10px;
+  background: #91a9bf;
+  transition: width 180ms ease, background-color 180ms ease;
+}
+#projects .carousel-dot[aria-current="true"]::before {
+  width: 24px;
+  background: #087cb7;
+}
+#projects .carousel-arrow {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: 1px solid #246b8d;
+  border-radius: 50%;
+  background: #04283e;
+}
+#projects .carousel-arrow .icon {
+  width: 20px;
+  height: 20px;
+}
+#projects .carousel-next .icon {
+  transform: rotate(180deg);
+}
+#projects .carousel-arrow:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+#projects .carousel-controls button:focus-visible {
+  outline-color: #075bac;
+}
+#projects .carousel-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+@media (max-width: 1099px) {
+  #projects .project-track {
+    --project-visible: 2;
+  }
+}
+@media (max-width: 699px) {
+  #projects .project-track {
+    --project-visible: 1;
+    --project-gap: 16px;
+  }
+  #projects .carousel-controls {
+    gap: 8px;
+  }
+  #projects .card-copy h3 {
+    font-size: 20px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  #projects .project-track {
+    scroll-behavior: auto;
+  }
 }

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" width="960" height="600">
+  <defs>
+    <linearGradient id="background" x2="1" y2="1"><stop stop-color="#04334d"/><stop offset="1" stop-color="#001523"/></linearGradient>
+    <radialGradient id="light"><stop stop-color="#008fc1" stop-opacity=".3"/><stop offset="1" stop-color="#008fc1" stop-opacity="0"/></radialGradient>
+    <symbol id="project-icon" viewBox="0 0 48 48"><path d="M8 9h32v33H8ZM15 3v12M33 3v12M16 28l6 6 12-14" />
+  </symbol>
+  </defs>
+  <path fill="url(#background)" d="M0 0h960v600H0z"/>
+  <ellipse cx="480" cy="280" rx="400" ry="270" fill="url(#light)"/>
+  <g fill="none" stroke="#157394" stroke-opacity=".45" stroke-width="2">
+    <path d="M0 480c200-135 355-125 540-20s300 75 420-15M0 525c210-90 385-100 550-5s280 60 410-35"/>
+    <circle cx="480" cy="285" r="158" stroke-dasharray="3 12"/>
+    <path d="M90 180h125l45 45M870 180H745l-45 45M140 380h100m480 0h100"/>
+  </g>
+  <g fill="none" stroke="#45dcff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+    <use href="#project-icon" x="360" y="165" width="240" height="240"/>
+  </g>
+  <g fill="#45dcff"><circle cx="90" cy="180" r="4"/><circle cx="870" cy="180" r="4"/><circle cx="140" cy="380" r="3"/><circle cx="820" cy="380" r="3"/></g>
+</svg>

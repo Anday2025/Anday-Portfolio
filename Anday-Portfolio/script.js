@@ -1,5 +1,18 @@
 const translations = {
   'no': {
+    'carouselLabel': 'Prosjektkarusell',
+    'carouselInstructions': 'Prosjekter. Bruk venstre og høyre piltast for å bla.',
+    'carouselPrevious': 'Forrige prosjekter',
+    'carouselNext': 'Neste prosjekter',
+    'carouselNavigation': 'Velg prosjektvisning',
+    'carouselShowRange': 'Vis prosjekt {first}–{last} av {total}',
+    'carouselShowSingle': 'Vis prosjekt {first} av {total}',
+    'carouselStatusRange': 'Prosjekt {first}–{last} av {total}',
+    'carouselStatusSingle': 'Prosjekt {first} av {total}',
+    'storageIllustrationAlt': 'Illustrasjon av Azure Storage Lab, ikke et skjermbilde.',
+    'bicepIllustrationAlt': 'Illustrasjon av Azure Bicep, ikke et skjermbilde.',
+    'jobIllustrationAlt': 'Illustrasjon av Job Tracker, ikke et skjermbilde.',
+    'cleanIllustrationAlt': 'Illustrasjon av CleanPlan, ikke et skjermbilde.',
     'home': 'Hjem',
     'projects': 'Prosjekter',
     'about': 'Om meg',
@@ -129,6 +142,19 @@ const translations = {
     'homeHealthcare': '11 år i helsevesenet.',
   },
   'en': {
+    'carouselLabel': 'Project carousel',
+    'carouselInstructions': 'Projects. Use the left and right arrow keys to browse.',
+    'carouselPrevious': 'Previous projects',
+    'carouselNext': 'Next projects',
+    'carouselNavigation': 'Choose project view',
+    'carouselShowRange': 'Show projects {first}–{last} of {total}',
+    'carouselShowSingle': 'Show project {first} of {total}',
+    'carouselStatusRange': 'Projects {first}–{last} of {total}',
+    'carouselStatusSingle': 'Project {first} of {total}',
+    'storageIllustrationAlt': 'Illustration of Azure Storage Lab, not a screenshot.',
+    'bicepIllustrationAlt': 'Illustration of Azure Bicep, not a screenshot.',
+    'jobIllustrationAlt': 'Illustration of Job Tracker, not a screenshot.',
+    'cleanIllustrationAlt': 'Illustration of CleanPlan, not a screenshot.',
     'home': 'Home',
     'projects': 'Projects',
     'about': 'About me',
@@ -382,4 +408,182 @@ if (document.querySelector('main.detail')) {
     navigationSections.forEach((section) => navigationResizeObserver.observe(section));
     updateActiveNavigation();
   }
+}
+
+// Native overflow and scroll snapping keep the project list usable without a library.
+const projectCarousel = document.querySelector('.project-carousel');
+if (projectCarousel) {
+  const track = projectCarousel.querySelector('.project-track');
+  const slides = [...track.querySelectorAll('.project-slide')];
+  const controls = projectCarousel.querySelector('.carousel-controls');
+  const dots = projectCarousel.querySelector('.carousel-dots');
+  const previous = projectCarousel.querySelector('.carousel-previous');
+  const next = projectCarousel.querySelector('.carousel-next');
+  const status = projectCarousel.querySelector('.carousel-status');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  let stops = [];
+  let activeStop = 0;
+  let scrollFrame = false;
+  let pointerStart = null;
+  let dragging = false;
+  let suppressDragClick = false;
+
+  function carouselWords() {
+    return translations[document.documentElement.lang === 'en' ? 'en' : 'no'];
+  }
+
+  function visibleRange(index) {
+    const width = slides[0].getBoundingClientRect().width;
+    const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+    const visible = Math.max(1, Math.round((track.clientWidth + gap) / (width + gap)));
+    const first = Math.min(index + 1, slides.length);
+    return { first, last: Math.min(first + visible - 1, slides.length), total: slides.length };
+  }
+
+  function rangeText(template, range) {
+    return template.replace(/\{(first|last|total)\}/g, (_, key) => range[key]);
+  }
+
+  function closestStop() {
+    return stops.reduce((best, value, index) =>
+      Math.abs(value - track.scrollLeft) < Math.abs(stops[best] - track.scrollLeft)
+        ? index
+        : best, 0);
+  }
+
+  function updateCarouselLabels() {
+    const words = carouselWords();
+    [...dots.children].forEach((button, index) => {
+      const range = visibleRange(index);
+      const template = range.first === range.last
+        ? words.carouselShowSingle
+        : words.carouselShowRange;
+      button.setAttribute('aria-label', rangeText(template, range));
+      if (index === activeStop) {
+        button.setAttribute('aria-current', 'true');
+      } else {
+        button.removeAttribute('aria-current');
+      }
+    });
+    previous.disabled = activeStop === 0;
+    next.disabled = activeStop === stops.length - 1;
+    const range = visibleRange(activeStop);
+    const message = rangeText(range.first === range.last
+      ? words.carouselStatusSingle
+      : words.carouselStatusRange, range);
+    if (status.textContent !== message) status.textContent = message;
+  }
+
+  function updateCarouselPosition() {
+    scrollFrame = false;
+    if (!stops.length) return;
+    activeStop = closestStop();
+    updateCarouselLabels();
+  }
+
+  function goToStop(index) {
+    const target = Math.max(0, Math.min(index, stops.length - 1));
+    track.scrollTo({
+      left: stops[target],
+      behavior: reducedMotion.matches ? 'auto' : 'smooth',
+    });
+  }
+
+  function refreshCarousel() {
+    const max = Math.max(0, track.scrollWidth - track.clientWidth);
+    const firstOffset = slides[0].offsetLeft;
+    const positions = slides.map((slide) => Math.min(slide.offsetLeft - firstOffset, max));
+    const newStops = positions.filter((value, index) =>
+      index === 0 || Math.abs(value - positions[index - 1]) > 1);
+    if (newStops.length !== stops.length) {
+      // Reuse existing buttons so keyboard focus survives responsive changes.
+      while (dots.children.length > newStops.length) dots.lastElementChild.remove();
+      while (dots.children.length < newStops.length) {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'carousel-dot';
+        button.setAttribute('aria-controls', track.id);
+        dots.append(button);
+      }
+    }
+    stops = newStops;
+    updateCarouselPosition();
+  }
+
+  previous.addEventListener('click', () => goToStop(activeStop - 1));
+  next.addEventListener('click', () => goToStop(activeStop + 1));
+  dots.addEventListener('click', (event) => {
+    const button = event.target.closest('.carousel-dot');
+    if (button) goToStop([...dots.children].indexOf(button));
+  });
+  track.addEventListener('keydown', (event) => {
+    if (event.altKey || event.ctrlKey || event.metaKey) return;
+    const targets = {
+      ArrowLeft: activeStop - 1,
+      ArrowRight: activeStop + 1,
+      Home: 0,
+      End: stops.length - 1,
+    };
+    if (!(event.key in targets)) return;
+    event.preventDefault();
+    goToStop(targets[event.key]);
+  });
+  track.addEventListener('scroll', () => {
+    if (!scrollFrame) {
+      scrollFrame = true;
+      window.requestAnimationFrame(updateCarouselPosition);
+    }
+  }, { passive: true });
+
+  // Touch uses the browser's native horizontal scrolling; mouse drag is optional.
+  track.addEventListener('dragstart', (event) => event.preventDefault());
+  track.addEventListener('pointerdown', (event) => {
+    if (event.pointerType !== 'mouse' || event.button !== 0) return;
+    suppressDragClick = false;
+    pointerStart = { id: event.pointerId, x: event.clientX, left: track.scrollLeft };
+  });
+  track.addEventListener('pointermove', (event) => {
+    if (!pointerStart || event.pointerId !== pointerStart.id) return;
+    const distance = event.clientX - pointerStart.x;
+    if (!dragging && Math.abs(distance) < 6) return;
+    if (!dragging) {
+      dragging = true;
+      track.classList.add('is-dragging');
+      track.setPointerCapture(event.pointerId);
+    }
+    event.preventDefault();
+    track.scrollLeft = pointerStart.left - distance;
+  });
+  function finishDrag(event) {
+    if (!pointerStart || event.pointerId !== pointerStart.id) return;
+    const didDrag = dragging;
+    pointerStart = null;
+    dragging = false;
+    track.classList.remove('is-dragging');
+    if (track.hasPointerCapture(event.pointerId)) track.releasePointerCapture(event.pointerId);
+    if (didDrag) {
+      suppressDragClick = event.type !== 'pointercancel';
+      goToStop(closestStop());
+    }
+  }
+  track.addEventListener('pointerup', finishDrag);
+  track.addEventListener('pointercancel', finishDrag);
+  track.addEventListener('pointerleave', (event) => {
+    if (!dragging) pointerStart = null;
+  });
+  track.addEventListener('click', (event) => {
+    if (suppressDragClick) {
+      event.preventDefault();
+      event.stopPropagation();
+      suppressDragClick = false;
+    }
+  }, true);
+
+  new ResizeObserver(refreshCarousel).observe(track);
+  new MutationObserver(refreshCarousel).observe(document.documentElement, {
+    attributes: true,
+    attributeFilter: ['lang'],
+  });
+  refreshCarousel();
+  controls.hidden = false;
 }

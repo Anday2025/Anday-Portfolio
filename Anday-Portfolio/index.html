@@ -114,100 +114,47 @@
             </svg>
             <span data-i18n="projects">Prosjekter</span>
           </div>
-          <div class="project-grid">
-            <a
-              class="project-card"
-              href="azure-storage.html"
+          <div
+            class="project-carousel"
+            role="region"
+            aria-label="Prosjektkarusell"
+            data-i18n-aria="carouselLabel"
+          >
+            <ol
+              class="project-grid project-track"
+              id="project-track"
+              tabindex="0"
+              aria-label="Prosjekter. Bruk venstre og høyre piltast for å bla."
+              data-i18n-aria="carouselInstructions"
             >
-              <div class="project-art azure-storage">
-                <svg
-                  class="icon"
-                  aria-hidden="true"
-                >
-                  <use href="assets/icons.svg#storage" /></svg
-                ><svg
-                  class="icon external"
-                  aria-hidden="true"
-                >
-                  <use href="assets/icons.svg#external" />
-                </svg>
-              </div>
-              <div class="card-copy">
-                <h3>Azure Storage Lab</h3>
-                <p data-i18n="homeStorage">
-                  Privat Blob-lagring med Entra ID, RBAC, overvåking og kostnadskontroll.
-                </p>
-                <div class="tags">
-                  <span>Azure Storage</span>
-                  <span>Microsoft Entra ID</span>
-                  <span>RBAC</span>
-                </div>
-                <span class="project-link">
-                  <span data-i18n="details">Utforsk prosjektet</span>
-                  →
-                </span>
-              </div>
-            </a>
-            <a
-              class="project-card"
-              href="azure-bicep.html"
-            >
-              <div class="project-art azure-bicep">
-                <svg
-                  class="icon"
-                  aria-hidden="true"
-                >
-                  <use href="assets/icons.svg#code" /></svg
-                ><svg
-                  class="icon external"
-                  aria-hidden="true"
-                >
-                  <use href="assets/icons.svg#external" />
-                </svg>
-              </div>
-              <div class="card-copy">
-                <h3>Azure Bicep – Infrastructure as Code</h3>
-                <p data-i18n="homeBicep">
-                  Azure-ressurser definert og administrert med Bicep og Azure CLI.
-                </p>
-                <div class="tags">
-                  <span>Azure Bicep</span>
-                  <span>Azure CLI</span>
-                  <span>Infrastructure as Code</span>
-                </div>
-                <span class="project-link">
-                  <span data-i18n="details">Utforsk prosjektet</span>
-                  →
-                </span>
-              </div>
-            </a>
-            <article class="project-card">
+            <li class="project-slide">
               <a
-                class="project-card-link"
-                href="job-tracker.html"
+                class="project-card"
+                href="azure-storage.html"
               >
-                <div class="project-art job-tracker">
-                  <svg
-                    class="icon"
-                    aria-hidden="true"
-                  >
-                    <use href="assets/icons.svg#chart" /></svg
-                  ><svg
-                    class="icon external"
-                    aria-hidden="true"
-                  >
-                    <use href="assets/icons.svg#external" />
-                  </svg>
+                <div class="project-art azure-storage">
+                  <img
+                    src="assets/images/projects/azure-storage.svg"
+                    width="960"
+                    height="600"
+                    alt="Illustrasjon av azure-storage; ikke et skjermbilde."
+                    data-i18n-alt="storageIllustrationAlt"
+                    loading="lazy"
+                    decoding="async"
+                    draggable="false"
+                  />
+
+                  <svg class="icon external" aria-hidden="true"><use href="assets/icons.svg#external" /></svg>
                 </div>
                 <div class="card-copy">
-                  <h3>Job Tracker</h3>
-                  <p data-i18n="job-tracker">
-                    Fullstack webapplikasjon for å administrere jobbsøknader.
+                  <h3>Azure Storage Lab</h3>
+                  <p data-i18n="homeStorage">
+                    Privat Blob-lagring med Entra ID, RBAC, overvåking og kostnadskontroll.
                   </p>
                   <div class="tags">
-                    <span>Java</span>
-                    <span>Spring Boot</span>
-                    <span>PostgreSQL</span>
+                    <span>Azure Storage</span>
+                    <span>Microsoft Entra ID</span>
+                    <span>RBAC</span>
                   </div>
                   <span class="project-link">
                     <span data-i18n="details">Utforsk prosjektet</span>
@@ -215,34 +162,35 @@
                   </span>
                 </div>
               </a>
-            </article>
-            <article class="project-card">
+            </li>
+            <li class="project-slide">
               <a
-                class="project-card-link"
-                href="cleanplan.html"
+                class="project-card"
+                href="azure-bicep.html"
               >
-                <div class="project-art cleanplan">
-                  <svg
-                    class="icon"
-                    aria-hidden="true"
-                  >
-                    <use href="assets/icons.svg#calendar" /></svg
-                  ><svg
-                    class="icon external"
-                    aria-hidden="true"
-                  >
-                    <use href="assets/icons.svg#external" />
-                  </svg>
+                <div class="project-art azure-bicep">
+                  <img
+                    src="assets/images/projects/azure-bicep.svg"
+                    width="960"
+                    height="600"
+                    alt="Illustrasjon av azure-bicep; ikke et skjermbilde."
+                    data-i18n-alt="bicepIllustrationAlt"
+                    loading="lazy"
+                    decoding="async"
+                    draggable="false"
+                  />
+
+                  <svg class="icon external" aria-hidden="true"><use href="assets/icons.svg#external" /></svg>
                 </div>
                 <div class="card-copy">
-                  <h3>CleanPlan</h3>
-                  <p data-i18n="homeCleanPlan">
-                    Administrasjon av eiendommer, oppgaver, brukere og tilganger.
+                  <h3>Azure Bicep – Infrastructure as Code</h3>
+                  <p data-i18n="homeBicep">
+                    Azure-ressurser definert og administrert med Bicep og Azure CLI.
                   </p>
                   <div class="tags">
-                    <span>Supabase</span>
-                    <span>PostgreSQL</span>
-                    <span>HTML</span>
+                    <span>Azure Bicep</span>
+                    <span>Azure CLI</span>
+                    <span>Infrastructure as Code</span>
                   </div>
                   <span class="project-link">
                     <span data-i18n="details">Utforsk prosjektet</span>
@@ -250,7 +198,94 @@
                   </span>
                 </div>
               </a>
-            </article>
+            </li>
+            <li class="project-slide">
+              <article class="project-card">
+                <a
+                  class="project-card-link"
+                  href="job-tracker.html"
+                >
+                  <div class="project-art job-tracker">
+                  <img
+                    src="assets/images/projects/job-tracker.svg"
+                    width="960"
+                    height="600"
+                    alt="Illustrasjon av job-tracker; ikke et skjermbilde."
+                    data-i18n-alt="jobIllustrationAlt"
+                    loading="lazy"
+                    decoding="async"
+                    draggable="false"
+                  />
+
+                  <svg class="icon external" aria-hidden="true"><use href="assets/icons.svg#external" /></svg>
+                </div>
+                  <div class="card-copy">
+                    <h3>Job Tracker</h3>
+                    <p data-i18n="job-tracker">
+                      Fullstack webapplikasjon for å administrere jobbsøknader.
+                    </p>
+                    <div class="tags">
+                      <span>Java</span>
+                      <span>Spring Boot</span>
+                      <span>PostgreSQL</span>
+                    </div>
+                    <span class="project-link">
+                      <span data-i18n="details">Utforsk prosjektet</span>
+                      →
+                    </span>
+                  </div>
+                </a>
+              </article>
+            </li>
+            <li class="project-slide">
+              <article class="project-card">
+                <a
+                  class="project-card-link"
+                  href="cleanplan.html"
+                >
+                  <div class="project-art cleanplan">
+                  <img
+                    src="assets/images/projects/cleanplan.svg"
+                    width="960"
+                    height="600"
+                    alt="Illustrasjon av cleanplan; ikke et skjermbilde."
+                    data-i18n-alt="cleanIllustrationAlt"
+                    loading="lazy"
+                    decoding="async"
+                    draggable="false"
+                  />
+
+                  <svg class="icon external" aria-hidden="true"><use href="assets/icons.svg#external" /></svg>
+                </div>
+                  <div class="card-copy">
+                    <h3>CleanPlan</h3>
+                    <p data-i18n="homeCleanPlan">
+                      Administrasjon av eiendommer, oppgaver, brukere og tilganger.
+                    </p>
+                    <div class="tags">
+                      <span>Supabase</span>
+                      <span>PostgreSQL</span>
+                      <span>HTML</span>
+                    </div>
+                    <span class="project-link">
+                      <span data-i18n="details">Utforsk prosjektet</span>
+                      →
+                    </span>
+                  </div>
+                </a>
+              </article>
+            </li>
+            </ol>
+            <div class="carousel-controls" hidden>
+              <button class="carousel-arrow carousel-previous" type="button" aria-controls="project-track" aria-label="Forrige prosjekter" data-i18n-aria="carouselPrevious">
+                <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#chevron" /></svg>
+              </button>
+              <div class="carousel-dots" role="group" aria-label="Velg prosjektvisning" data-i18n-aria="carouselNavigation"></div>
+              <button class="carousel-arrow carousel-next" type="button" aria-controls="project-track" aria-label="Neste prosjekter" data-i18n-aria="carouselNext">
+                <svg class="icon" aria-hidden="true"><use href="assets/icons.svg#chevron" /></svg>
+              </button>
+            </div>
+            <p class="carousel-status carousel-sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
           </div>
         </section>
         <section id="about">
@@ -299,7 +334,7 @@
                     class="icon"
                     aria-hidden="true"
                   >
-                    <use href="assets/icons.svg#cloud" />
+                    <use href="assets/icons.svg#cloud-code" />
                   </svg>
                   <span data-i18n="homeExperience">
                     Praktisk erfaring fra egne Azure- og utviklingsprosjekter.
@@ -355,7 +390,7 @@
                 class="icon"
                 aria-hidden="true"
               >
-                <use href="assets/icons.svg#cloud" />
+                <use href="assets/icons.svg#azure-mark" />
               </svg>
               <span data-i18n="skillAzure">Microsoft Azure</span>
             </div>
